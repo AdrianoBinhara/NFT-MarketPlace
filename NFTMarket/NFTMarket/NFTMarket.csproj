@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Sharpnado.Presentation.Forms" Version="1.7.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\" />
+    <None Remove="ViewModels\" />
+    <None Remove="Models\" />
+    <None Remove="Core\" />
+    <None Remove="Core\Fonts\" />
+    <None Remove="Core\Fonts\WorkSans-Bold.ttf" />
+    <None Remove="Core\Fonts\WorkSans-BoldItalic.ttf" />
+    <None Remove="Core\Fonts\WorkSans-Italic.ttf" />
+    <None Remove="Core\Fonts\WorkSans-Light.ttf" />
+    <None Remove="Core\Fonts\WorkSans-Medium.ttf" />
+    <None Remove="Core\Fonts\WorkSans-MediumItalic.ttf" />
+    <None Remove="Core\Fonts\WorkSans-Regular.ttf" />
+    <None Remove="Core\Fonts\WorkSans-SemiBold.ttf" />
+    <None Remove="Sharpnado.Shadows" />
+    <None Remove="Sharpnado.MaterialFrame" />
+    <None Remove="Sharpnado.Presentation.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Models\" />
+    <Folder Include="Core\" />
+    <Folder Include="Core\Fonts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Core\Fonts\WorkSans-Bold.ttf" />
+    <EmbeddedResource Include="Core\Fonts\WorkSans-BoldItalic.ttf" />
+    <EmbeddedResource Include="Core\Fonts\WorkSans-Italic.ttf" />
+    <EmbeddedResource Include="Core\Fonts\WorkSans-Light.ttf" />
+    <EmbeddedResource Include="Core\Fonts\WorkSans-Medium.ttf" />
+    <EmbeddedResource Include="Core\Fonts\WorkSans-MediumItalic.ttf" />
+    <EmbeddedResource Include="Core\Fonts\WorkSans-Regular.ttf" />
+    <EmbeddedResource Include="Core\Fonts\WorkSans-SemiBold.ttf" />
+  </ItemGroup>
+</Project>

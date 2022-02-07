@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:sharpnado1="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame"
+    x:Class="NFTMarket.Views.WelcomePage" BackgroundColor="#5C60A0">
+    <ContentPage.Content>
+        <Grid
+            VerticalOptions="FillAndExpand">
+            <Grid.Background>
+                 <LinearGradientBrush EndPoint="1,0">
+                        <GradientStop Color="#FF767BB1"
+                                      Offset="1.0"/>
+                        <GradientStop Color="#5C609B"
+                                      Offset="0.1"/>
+                    </LinearGradientBrush>
+            </Grid.Background>
+            <Image
+                Aspect="AspectFit"
+                VerticalOptions="End"
+                Source="javier-miranda.png">
+                
+            </Image>
+            <Label
+                Margin="10,65"
+                HorizontalOptions="CenterAndExpand"
+                FontFamily="WorkSansBold"
+                TextColor="{x:StaticResource ShadowLight}"
+                FontSize="36">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Welcome to"/>
+                        <Span Text="&#10;"/>
+                        <Span Text="NFT Marketplace"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <sharpnado1:MaterialFrame
+                Style="{x:StaticResource Key=AcrylicFrame}"
+                VerticalOptions="End"
+                HasShadow="False"
+                CornerRadius="30"
+                Margin="30,70"
+                HeightRequest="200"
+                Padding="10"
+                IsClippedToBounds="True"> 
+                <StackLayout VerticalOptions="FillAndExpand" Spacing="5">
+                    <Label
+                        Text="Explore and Mint NFTs"
+                        FontFamily="WorkSansBold"
+                        HorizontalOptions="Center"
+                        TextColor="White"
+                        Margin="0,30,0,0"
+                        FontSize="Large"/>
+                    <Label
+                        Text="You can buy and sell the NFTs of the best artists in the world"
+                        FontFamily="WorkSansLight"
+                        HorizontalOptions="Center"
+                        TextColor="White"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        FontSize="Small"/>
+                    <sharpnado1:MaterialFrame
+                        MaterialTheme="AcrylicBlur"
+                        BorderColor="{x:StaticResource Shadow}"
+                        HeightRequest="50"
+                        CornerRadius="25"
+                        Padding="0"
+                        LightThemeBackgroundColor="{x:StaticResource Button}"
+                        Margin="30,20"
+                        VerticalOptions="EndAndExpand" >
+                        <Label
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Text="Get started now"
+                            TextColor="{x:StaticResource ShadowLight}"
+                            FontFamily="WorkSansBold"/>
+                    </sharpnado1:MaterialFrame>
+                </StackLayout>
+            </sharpnado1:MaterialFrame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
