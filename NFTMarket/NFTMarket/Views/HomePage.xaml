@@ -53,18 +53,13 @@
                     TextColor="White"
                     Text=" "
                     TextColorSelected="Yellow">
-                    <Grid
-                        BackgroundColor="{x:StaticResource Background}">
-                        <BindableLayout.ItemTemplate>
+                    <CollectionView ItemsSource="{Binding NFTList}">
+                        <CollectionView.ItemTemplate>
                             <DataTemplate>
-
+                                <Label Text="{Binding Name}"/>
                             </DataTemplate>
-                        </BindableLayout.ItemTemplate>
-                        <Label
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            Text="TabContent1" />
-                    </Grid>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
                 </xct:TabViewItem>
 
                 <xct:TabViewItem

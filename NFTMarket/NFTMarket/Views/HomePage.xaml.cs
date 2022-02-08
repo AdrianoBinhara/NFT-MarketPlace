@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using NFTMarket.ViewModels;
 using Xamarin.Forms;
 
 namespace NFTMarket.Views
@@ -10,6 +10,7 @@ namespace NFTMarket.Views
         public HomePage()
         {
             InitializeComponent();
+            BindingContext = new HomeViewModel();
         }
     }
 }

@@ -5,9 +5,9 @@ namespace NFTMarket.Models
 {
     public class NFT
     {
-        private void GetNFTs()
+        public List<NFT> GetNFTs()
         {
-            new List<NFT>()
+           return new List<NFT>()
             {
                 new NFT{ Name = "Azumi", Value =  200055.02, Valuation = 3.99},
                 new NFT{ Name = "Hape prime", Value = 180055.45, Valuation = 33.79},
