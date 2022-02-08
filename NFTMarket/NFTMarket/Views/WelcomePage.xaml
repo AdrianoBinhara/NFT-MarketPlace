@@ -20,7 +20,7 @@
             <Image
                 Aspect="AspectFit"
                 VerticalOptions="End"
-                Source="javier-miranda.png">
+                Source="javier_miranda.png">
                 
             </Image>
             <Label

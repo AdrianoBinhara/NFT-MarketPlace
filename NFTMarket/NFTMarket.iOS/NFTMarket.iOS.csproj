@@ -140,7 +140,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\javier-miranda.png" />
+    <BundleResource Include="Resources\javier_miranda.png" />
     <BundleResource Include="Resources\MintedButton.png" />
     <BundleResource Include="Resources\Home.png" />
     <BundleResource Include="Resources\Stats.png" />
