@@ -3,7 +3,9 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:sharpnado1="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame"
-    x:Class="NFTMarket.Views.WelcomePage" BackgroundColor="#5C60A0">
+    x:Class="NFTMarket.Views.WelcomePage"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="#5C60A0">
     <ContentPage.Content>
         <Grid
             VerticalOptions="FillAndExpand">
@@ -75,6 +77,9 @@
                             Text="Get started now"
                             TextColor="{x:StaticResource ShadowLight}"
                             FontFamily="WorkSansBold"/>
+                        <sharpnado1:MaterialFrame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>    
+                        </sharpnado1:MaterialFrame.GestureRecognizers>
                     </sharpnado1:MaterialFrame>
                 </StackLayout>
             </sharpnado1:MaterialFrame>

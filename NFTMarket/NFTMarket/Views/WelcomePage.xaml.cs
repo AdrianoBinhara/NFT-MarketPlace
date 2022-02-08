@@ -11,5 +11,10 @@ namespace NFTMarket.Views
         {
             InitializeComponent();
         }
+
+        void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new HomePage());
+        }
     }
 }

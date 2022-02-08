@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:xct="http://xamarin.com/schemas/2020/toolkit" xmlns:sharpnado1="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame"
+    x:Class="NFTMarket.Views.HomePage"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="{x:StaticResource Background}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+             <ControlTemplate
+                x:Key="FabTabItemTemplate">
+                <Grid>
+                    <ImageButton
+                        InputTransparent="True"
+                        Source="MintedButton.png"
+                        HorizontalOptions="Center"
+                        BackgroundColor="Transparent"
+                        HeightRequest="160"
+                        Aspect="AspectFill"
+                        WidthRequest="70" 
+                        VerticalOptions="StartAndExpand"
+                        Margin="0,0,0,15">
+                        <ImageButton.CornerRadius>
+                            <OnPlatform x:TypeArguments="x:Int32">
+                                <On Platform="iOS" Value="30"/>
+                                <On Platform="Android" Value="60"/>
+                                <On Platform="UWP" Value="36"/>
+                            </OnPlatform>
+                        </ImageButton.CornerRadius>
+                    </ImageButton>
+                </Grid>
+            </ControlTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid BackgroundColor="{x:StaticResource Background}">
+            <xct:TabView
+                TabStripPlacement="Bottom"
+                TabIndicatorPlacement="Top"
+                TabStripHeight="90"
+                BackgroundColor="Blue"
+                TabContentBackgroundColor="{x:StaticResource Background}">
+
+                 <xct:TabView.TabStripBackgroundView>
+                      <sharpnado1:MaterialFrame
+                            Style="{x:StaticResource Key=AcrylicFrame}"
+                            HasShadow="False"
+                            CornerRadius="40"/>
+                 </xct:TabView.TabStripBackgroundView>
+                <xct:TabViewItem
+                    Icon="Home.png"
+                    Scale=".8"
+                    TextColor="White"
+                    Text=" "
+                    TextColorSelected="Yellow">
+                    <Grid
+                        BackgroundColor="{x:StaticResource Background}">
+                        <Label
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Text="TabContent1" />
+                    </Grid>
+                </xct:TabViewItem>
+
+                <xct:TabViewItem
+                    Icon="Stats.png"
+                    TextColor="White"
+                    Scale=".8"
+                    Text=" "
+                    TextColorSelected="Yellow"
+                    FontSize="12">
+                    <Grid BackgroundColor="{x:StaticResource Background}">
+                        <Label    
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Text="TabContent2" />
+                    </Grid>
+                </xct:TabViewItem>
+                 <xct:TabViewItem
+                   ControlTemplate="{StaticResource FabTabItemTemplate}"
+                    Text=" ">
+                    <Grid BackgroundColor="{x:StaticResource Background}">
+                        <Label    
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Text="TabContent2" />
+                    </Grid>
+                </xct:TabViewItem>
+                <xct:TabViewItem
+                    Icon="Explore.png"
+                    TextColor="White"
+                    Text=" "
+                    Scale=".8"
+                    TextColorSelected="Yellow"
+                    FontSize="12">
+                    <Grid BackgroundColor="{x:StaticResource Background}">
+                        <Label
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Text="TabContent1" />
+                    </Grid>
+                </xct:TabViewItem>
+                <xct:TabViewItem
+                    Icon="People.png"
+                    TextColor="White"
+                    Text=" "
+                    Scale=".8"
+                    TextColorSelected="Yellow"
+                    FontSize="12">
+                    <Grid BackgroundColor="{x:StaticResource Background}">
+                        <Label
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Text="PEssoas" />
+                    </Grid>
+                </xct:TabViewItem>
+            </xct:TabView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

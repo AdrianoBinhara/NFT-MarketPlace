@@ -12,7 +12,7 @@ namespace NFTMarket
             InitializeComponent();
             Sharpnado.MaterialFrame.Initializer.Initialize(loggerEnable: false, debugLogEnable: false);
 
-            MainPage = new WelcomePage();
+            MainPage = new NavigationPage(new WelcomePage());
         }
 
         protected override void OnStart()
