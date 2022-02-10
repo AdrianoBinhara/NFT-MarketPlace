@@ -7,11 +7,19 @@ namespace NFTMarket.ViewModels
     public class HomeViewModel: BaseViewModel
     {
         private ObservableCollection<NFT> _nftList;
-        public ObservableCollection<NFT> NFTList
+        public ObservableCollection<NFT> TrendingList
         {
             get { return _nftList; }
             set { SetProperty(ref _nftList, value); }
         }
+
+        private ObservableCollection<NFT> _topSellerList;
+        public ObservableCollection<NFT> TopSellerList
+        {
+            get { return _topSellerList; }
+            set { SetProperty(ref _topSellerList, value); }
+        }
+
         public HomeViewModel()
         {
             Initialize();
@@ -20,7 +28,8 @@ namespace NFTMarket.ViewModels
         private void Initialize()
         {
             NFT nft = new NFT();
-            NFTList = new ObservableCollection<NFT>(nft.GetNFTs());
+            TrendingList = new ObservableCollection<NFT>(nft.GetTrendingNFTs());
+            TopSellerList = new ObservableCollection<NFT>(nft.GetTopSeller());
         }
     }
 

@@ -9,3 +9,4 @@ using Xamarin.Forms.Xaml;
 [assembly: ExportFont("WorkSans-MediumItalic.ttf", Alias = "WorkSansMediumItalic")]
 [assembly: ExportFont("WorkSans-Regular.ttf", Alias = "WorkSansRegular")]
 [assembly: ExportFont("WorkSans-SemiBold.ttf", Alias = "WorkSansSemiBold")]
+[assembly: ExportFont("fa-regular-400.ttf", Alias = "fa-regular-400")]

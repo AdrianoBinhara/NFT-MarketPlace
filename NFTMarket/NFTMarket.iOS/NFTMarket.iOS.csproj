@@ -146,5 +146,26 @@
     <BundleResource Include="Resources\Stats.png" />
     <BundleResource Include="Resources\Explore.png" />
     <BundleResource Include="Resources\People.png" />
+    <BundleResource Include="Resources\Azumi.png" />
+    <BundleResource Include="Resources\Mutant.png" />
+    <BundleResource Include="Resources\HapePrime.png" />
+    <BundleResource Include="Resources\Metaverse.png" />
+    <BundleResource Include="Resources\Cryoto.png" />
+    <BundleResource Include="Resources\Mountain.png" />
+    <BundleResource Include="Resources\ApeClub.png" />
+    <BundleResource Include="Resources\MutantApe.png" />
+    <BundleResource Include="Resources\TheSandbox.png" />
+    <BundleResource Include="Resources\art.png" />
+    <BundleResource Include="Resources\VirtualWorlds.png" />
+    <BundleResource Include="Resources\Music.png" />
+    <BundleResource Include="Resources\Virtual.png" />
+    <BundleResource Include="Resources\PortraitArt.png" />
+    <BundleResource Include="Resources\AbstractArt.png" />
+    <BundleResource Include="Resources\3DArt.png" />
+    <BundleResource Include="Resources\Wave.png" />
+    <BundleResource Include="Resources\AbstractPink.png" />
+    <BundleResource Include="Resources\WaveBlue.png" />
+    <BundleResource Include="Resources\Abstract23.png" />
+    <BundleResource Include="Resources\Ethereum.png" />
   </ItemGroup>
 </Project>

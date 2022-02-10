@@ -34,6 +34,8 @@
     <None Remove="Sharpnado.MaterialFrame" />
     <None Remove="Sharpnado.Presentation.Forms" />
     <None Remove="Xamarin.CommunityToolkit" />
+    <None Remove="Core\Fonts\FontAwesomeRegular.otf" />
+    <None Remove="Core\Fonts\fa-regular-400.ttf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
@@ -51,5 +53,7 @@
     <EmbeddedResource Include="Core\Fonts\WorkSans-MediumItalic.ttf" />
     <EmbeddedResource Include="Core\Fonts\WorkSans-Regular.ttf" />
     <EmbeddedResource Include="Core\Fonts\WorkSans-SemiBold.ttf" />
+    <EmbeddedResource Include="Core\Fonts\FontAwesomeRegular.otf" />
+    <EmbeddedResource Include="Core\Fonts\fa-regular-400.ttf" />
   </ItemGroup>
 </Project>
