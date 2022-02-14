@@ -50,6 +50,8 @@
                            HasShadow="False"
                            CornerRadius="40"/>
                 </xct:TabView.TabStripBackgroundView>
+
+                <!-- HomePage -->
                 <xct:TabViewItem
                     Icon="Home.png"
                     Scale=".8"
@@ -61,18 +63,158 @@
                     </ScrollView>
                 </xct:TabViewItem>
 
+                <!-- StatisticsPage -->
                 <xct:TabViewItem
                     Icon="Stats.png"
                     TextColor="White"
-                    Scale=".8"
+                    Scale=".7"
                     Text=" "
                     TextColorSelected="Yellow"
                     FontSize="12">
-                    <Grid BackgroundColor="{x:StaticResource Background}">
-                        <Label    
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            Text="TabContent2" />
+                    <Grid
+                        HeightRequest="50"
+                        ColumnDefinitions="*,*"
+                        Margin="0,60,0,0"
+                        ColumnSpacing="0"
+                        RowDefinitions="40,Auto,*"
+                        BackgroundColor="{x:StaticResource Background}">
+
+                        <!-- Upper Tab -->
+                        <StackLayout
+                            Spacing="0"
+                            HorizontalOptions="End"
+                            Orientation="Horizontal"
+                            Margin="0,0,10,0">
+                            <Image
+                                Source="Stats"
+                                Opacity=".6"
+                                Scale=".4"/>
+                            <Label
+                                Text="Ranking"
+                                VerticalTextAlignment="Center"
+                                HorizontalOptions="End"
+                                TextColor="White"
+                                FontAttributes="Bold"
+                                FontFamily="WorkSansBold"/>
+                        </StackLayout>
+                        <BoxView
+                            HeightRequest="3"
+                            VerticalOptions="End"
+                            HorizontalOptions="End"
+                            Color="#6D42FF"
+                            CornerRadius="5,5,0,0"
+                            WidthRequest="120"/>
+
+                        <StackLayout
+                            HorizontalOptions="Start"
+                            Grid.Column="1"
+                            Spacing="0"
+                            Orientation="Horizontal"
+                            Margin="10,0,0,0">
+                            <Image
+                                Source="Stats"
+                                Opacity=".6"
+                                Scale=".4"/>
+                            <Label
+                                Text="Activity"
+                                VerticalTextAlignment="Center"
+                                HorizontalOptions="Start"
+                                TextColor="White"
+                                FontFamily="WorkSansBold"/>
+                        </StackLayout>
+                        <BoxView
+                            HeightRequest="3"
+                            Grid.Column="1"
+                            VerticalOptions="End"
+                            CornerRadius="5,5,0,0"
+                            IsVisible="false"
+                            HorizontalOptions="Start"
+                            Color="#6D42FF"
+                            WidthRequest="120"/>
+
+                        <BoxView
+                            HeightRequest="1"
+                            VerticalOptions="End"
+                            Grid.ColumnSpan="2"
+                            BackgroundColor="{x:StaticResource Background2}"/>
+
+                        <Frame
+                            Margin="10,10,5,10"
+                            IsClippedToBounds="True"
+                            HasShadow="False"
+                            HeightRequest="50"
+                            Padding="0"
+                            Grid.Row="1"
+                            BorderColor="#3E1E63"
+                            BackgroundColor="#2B1642"
+                            HorizontalOptions="FillAndExpand"
+                            CornerRadius="25">
+                            <StackLayout
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                Spacing="10"
+                                Orientation="Horizontal">
+                                <Image
+                                    Source="cubes"
+                                    HeightRequest="20"
+                                    Opacity=".5"/>
+                                <Label
+                                    Text="All categories"
+                                    TextColor="White"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalTextAlignment="Center"
+                                    FontFamily="WorkSansRegular"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame
+                            Margin="5,10,10,10"
+                            IsClippedToBounds="True"
+                            HasShadow="False"
+                            HeightRequest="50"
+                            Padding="0"
+                            BorderColor="#3E1E63"
+                            BackgroundColor="#2B1642"
+                            HorizontalOptions="FillAndExpand"
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            CornerRadius="25">
+                            <StackLayout
+                                VerticalOptions="Center"
+                                Spacing="10"
+                                HorizontalOptions="Center"
+                                Orientation="Horizontal">
+                                <Image
+                                    Source="chain"
+                                    HeightRequest="20"
+                                    Opacity=".5"/>
+                                <Label
+                                    Text="All Chains"
+                                    TextColor="White"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalTextAlignment="Center"
+                                    FontFamily="WorkSansRegular"/>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame
+                            Margin="10,15"
+                            IsClippedToBounds="True"
+                            HasShadow="False"
+                            Padding="0"
+                            BorderColor="#3E1E63"
+                            BackgroundColor="#2B1642"
+                            Grid.ColumnSpan="2"
+                            Grid.Row="2"
+                            CornerRadius="25">
+                            <Frame.Background>
+                                <RadialGradientBrush>
+                                    <GradientStop Color="{x:StaticResource Background}"
+                                                  Offset="1.0"/>
+                                    <GradientStop Color="#330C445B"
+                                                  Offset="0"/>
+                                </RadialGradientBrush>
+                            </Frame.Background>
+                        </Frame>
                     </Grid>
                 </xct:TabViewItem>
                  <xct:TabViewItem

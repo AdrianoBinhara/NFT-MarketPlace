@@ -143,7 +143,6 @@
     <BundleResource Include="Resources\javier_miranda.png" />
     <BundleResource Include="Resources\MintedButton.png" />
     <BundleResource Include="Resources\Home.png" />
-    <BundleResource Include="Resources\Stats.png" />
     <BundleResource Include="Resources\Explore.png" />
     <BundleResource Include="Resources\People.png" />
     <BundleResource Include="Resources\Azumi.png" />
@@ -167,5 +166,9 @@
     <BundleResource Include="Resources\WaveBlue.png" />
     <BundleResource Include="Resources\Abstract23.png" />
     <BundleResource Include="Resources\Ethereum.png" />
+    <BundleResource Include="Resources\Stats.png" />
+    <BundleResource Include="Resources\activity.png" />
+    <BundleResource Include="Resources\chain.png" />
+    <BundleResource Include="Resources\cubes.png" />
   </ItemGroup>
 </Project>

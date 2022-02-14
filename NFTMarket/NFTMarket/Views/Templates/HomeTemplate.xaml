@@ -34,7 +34,8 @@
     
     <Label
         Margin="15,0"
-        TextColor="White"      Text="Trending collections"
+        TextColor="White"
+        Text="Trending collections"
         FontFamily="WorkSansBold"
         FontSize="Large"/>
     
