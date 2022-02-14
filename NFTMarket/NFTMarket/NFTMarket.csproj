@@ -37,6 +37,7 @@
     <None Remove="Core\Fonts\FontAwesomeRegular.otf" />
     <None Remove="Core\Fonts\fa-regular-400.ttf" />
     <None Remove="Views\Templates\" />
+    <None Remove="Core\Converters\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
@@ -45,6 +46,7 @@
     <Folder Include="Core\" />
     <Folder Include="Core\Fonts\" />
     <Folder Include="Views\Templates\" />
+    <Folder Include="Core\Converters\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Core\Fonts\WorkSans-Bold.ttf" />

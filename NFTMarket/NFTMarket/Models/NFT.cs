@@ -27,6 +27,21 @@ namespace NFTMarket.Models
             };
         }
 
+        public List<NFT> GetNFTList()
+        {
+            return new List<NFT>()
+            {
+                new NFT{ Name = "Azumi", Image = "Wave.png", Value = 200055.46, Valuation = 3.99, Likes = 200, Description = "wav2 #5672"},
+                new NFT{ Name = "Abstract Pink", Image = "AbstractPink.png", Value = 180055.45, Valuation = 33.79, Likes = 129, Description = "abstract #2538"},
+                new NFT{ Name = "WaveBlue", Image = "WaveBlue.png", Value = 90055.62, Valuation = -6.56, Likes = 156, Description = "wavepi #5267"},
+                new NFT{ Name = "Abstract23", Image = "Abstract23.png", Value = 88055.12, Valuation = 9.99, Likes =136, Description = "abstract #2038"},
+                new NFT{ Name = "Avery", Image = "Wave.png", Value = 200055.46, Valuation = -3.99, Likes = 200, Description = "wav2 #5672"},
+                new NFT{ Name = "Abstract help", Image = "AbstractPink.png", Value = 180055.45, Valuation = -23.49, Likes = 129, Description = "abstract #2538"},
+                new NFT{ Name = "Wave", Image = "WaveBlue.png", Value = 90055.62, Valuation = 3.99, Likes = 156, Description = "wavepi #5267"},
+                new NFT{ Name = "Abstract", Image = "Abstract23.png", Value = 88055.12, Valuation = 7.29, Likes =136, Description = "abstract #2038"}
+            };
+        }
+
         public string Name { get; set; }
         public double Value { get; set; }
         public object Valuation { get; set; }

@@ -50,9 +50,12 @@
         </CollectionView.ItemsLayout>
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                  <sharpnado1:MaterialFrame
+                  <Frame
                       Style="{x:StaticResource Key=AcrylicFrame}"
                       HasShadow="False"
+                      BorderColor="#3E1E63"
+                      Opacity=".8"
+                      BackgroundColor="#2B1642"
                       Padding="10,10,10,70"
                       CornerRadius="30">
                       <StackLayout>
@@ -82,7 +85,7 @@
                                       Text="{Binding Likes}"/>
                           </StackLayout>
                       </StackLayout>
-                  </sharpnado1:MaterialFrame>
+                  </Frame>
             </DataTemplate>
         </CollectionView.ItemTemplate>
     </CollectionView>
@@ -90,11 +93,13 @@
     <Label
         Margin="15,0"
         TextColor="White"
-        Text="Top seller"     FontFamily="WorkSansBold"
+        Text="Top seller"
+        FontFamily="WorkSansBold"
         FontSize="Large"/>
     
     <CollectionView BackgroundColor="Transparent"
-                    HeightRequest="270"                  Margin="0,0,0,70"
+                    HeightRequest="270"
+                    Margin="0,0,0,70"
                     HorizontalScrollBarVisibility="Never"
                     ItemsSource="{Binding TopSellerList}">
         <CollectionView.ItemsLayout>
@@ -104,9 +109,11 @@
         </CollectionView.ItemsLayout>
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                  <sharpnado1:MaterialFrame
+                  <Frame
                       Style="{x:StaticResource Key=AcrylicFrame}"
                       HasShadow="False"
+                      BorderColor="#3E1E63"
+                      BackgroundColor="#2B1642"
                       Padding="10,10,10,70"
                       CornerRadius="30">
                       <StackLayout Spacing="0">
@@ -119,13 +126,15 @@
                               FontFamily="WorkSansRegular"
                               FontSize="Small"
                               TextColor="{x:StaticResource ShadowLight}"
-                              Text="{Binding Name}"/>                        <Label
+                              Text="{Binding Name}"/>
+                          <Label
                               Margin="0,0,0,5"
                               FontFamily="WorkSansRegular"
                               Opacity=".5"
                               FontSize="Small"
                               TextColor="{x:StaticResource ShadowLight}"
-                              Text="{Binding Description}"/>                        <StackLayout Orientation="Horizontal">
+                              Text="{Binding Description}"/>
+                          <StackLayout Orientation="Horizontal">
                              <Image 
                                  Source="Ethereum.png"
                                  WidthRequest="10"
@@ -152,7 +161,7 @@
                                   Text="{Binding Likes}"/>
                           </StackLayout>
                       </StackLayout>
-                  </sharpnado1:MaterialFrame>
+                  </Frame>
             </DataTemplate>
         </CollectionView.ItemTemplate>
     </CollectionView>

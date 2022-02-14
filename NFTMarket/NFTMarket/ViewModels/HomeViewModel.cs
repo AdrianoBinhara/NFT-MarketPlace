@@ -20,6 +20,13 @@ namespace NFTMarket.ViewModels
             set { SetProperty(ref _topSellerList, value); }
         }
 
+        private ObservableCollection<NFT> _NFTList;
+        public ObservableCollection<NFT> NFTList
+        {
+            get { return _NFTList; }
+            set { SetProperty(ref _NFTList, value); }
+        }
+
         public HomeViewModel()
         {
             Initialize();
@@ -30,6 +37,7 @@ namespace NFTMarket.ViewModels
             NFT nft = new NFT();
             TrendingList = new ObservableCollection<NFT>(nft.GetTrendingNFTs());
             TopSellerList = new ObservableCollection<NFT>(nft.GetTopSeller());
+            NFTList = new ObservableCollection<NFT>(nft.GetNFTList());
         }
     }
 

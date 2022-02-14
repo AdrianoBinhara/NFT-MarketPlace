@@ -200,7 +200,7 @@
                             Margin="10,15"
                             IsClippedToBounds="True"
                             HasShadow="False"
-                            Padding="0"
+                            Padding="10,0"
                             BorderColor="#3E1E63"
                             BackgroundColor="#2B1642"
                             Grid.ColumnSpan="2"
@@ -214,6 +214,74 @@
                                                   Offset="0"/>
                                 </RadialGradientBrush>
                             </Frame.Background>
+                            <CollectionView x:Name="collection" VerticalScrollBarVisibility="Never" ItemsSource="{Binding NFTList}">
+                                <CollectionView.ItemsLayout>
+                                    <LinearItemsLayout ItemSpacing="30" Orientation="Vertical"/>
+                                </CollectionView.ItemsLayout>
+                                <CollectionView.Header>
+                                    <BoxView HeightRequest="20" Color="Transparent"/>
+                                </CollectionView.Header>
+                                <CollectionView.Footer>
+                                    <BoxView HeightRequest="140" Color="Transparent"/>
+                                </CollectionView.Footer>
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid
+                                            RowDefinitions="Auto,Auto"
+                                            ColumnDefinitions="Auto,2*,4*,3*">
+                                            <Label
+                                                Text="{Binding .,Converter={x:StaticResource ItemNumberConverter}, ConverterParameter={Binding Source={x:Reference collection}, Path=BindingContext}}"
+                                                Grid.RowSpan="2" 
+                                                VerticalTextAlignment="Center"
+                                                TextColor="{x:StaticResource ShadowLight}"
+                                                Opacity=".5"/>
+                                            <Image
+                                                Grid.Column="1"
+                                                HeightRequest="50"
+                                                Grid.RowSpan="2"
+                                                WidthRequest="50"
+                                                Source="{Binding Image}"/>
+                                            <Label
+                                                Text="{Binding Name}"
+                                                Grid.Column="2"
+                                                VerticalTextAlignment="Center"
+                                                TextColor="{x:StaticResource ShadowLight}"
+                                                FontFamily="WorkSansBold"/>
+                                            <Label
+                                                Text="view info"
+                                                Grid.Column="2"
+                                                FontSize="Small"
+                                                Grid.Row="1"
+                                                VerticalTextAlignment="Center"
+                                                TextColor="{x:StaticResource ShadowLight}"
+                                                FontFamily="WorkSansRegular"/>
+                                            <StackLayout
+                                                HorizontalOptions="EndAndExpand"
+                                                Orientation="Horizontal"
+                                                Grid.Column="3">
+                                                <Image
+                                                    HeightRequest="20"
+                                                    Source="Ethereum"/>
+                                                <Label
+                                                    Text="{Binding Value}"
+                                                    VerticalTextAlignment="Center"
+                                                    TextColor="{x:StaticResource ShadowLight}"
+                                                    FontFamily="WorkSansRegular"/>
+                                            </StackLayout>
+
+                                            <Label
+                                                Text="{Binding Valuation, StringFormat='{0:F2}%'}"
+                                                Grid.Row="1"
+                                                Grid.Column="3"
+                                                HorizontalOptions="EndAndExpand"
+                                                TextColor="{Binding Valuation, Converter={StaticResource ValuationConverter}}"
+                                                VerticalTextAlignment="Center"
+                                                FontFamily="WorkSansRegular"/>
+                                        </Grid>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+
                         </Frame>
                     </Grid>
                 </xct:TabViewItem>

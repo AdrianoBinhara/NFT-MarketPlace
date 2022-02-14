@@ -2,7 +2,8 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sharpnado1="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame"
-             x:Class="NFTMarket.App">
+             x:Class="NFTMarket.App"
+             xmlns:converters="clr-namespace:NFTMarket.Core.Converters">
     <Application.Resources>
         <Color x:Key="Background">#211134</Color>
         <Color x:Key="Background2">#543E6F</Color>
@@ -17,5 +18,10 @@
                 <Setter Property="MaterialTheme" Value="AcrylicBlur"/>
                 <Setter Property="LightThemeBackgroundColor" Value="#F1F1F1"/>
          </Style>
+
+        <converters:ValuationConverter
+            x:Key="ValuationConverter"/>
+         <converters:ItemNumberConverter
+            x:Key="ItemNumberConverter"/>
     </Application.Resources>
 </Application>  
